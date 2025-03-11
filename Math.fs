@@ -12,4 +12,4 @@ let collatz n =
     elif n % 2UL = 0UL then colrec (n/2UL) (step + 1UL)
     else colrec (3UL * n + 1UL) (step + 1UL)
   let nUL = uint64 n
-  colrec nUL 0UL
+  int (colrec nUL 0UL)
