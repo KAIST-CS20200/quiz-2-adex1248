@@ -7,7 +7,9 @@ open System
 /// Collatz sequence.
 let collatz n =
   let rec colrec n step = 
-    if n = 1 then step
-    elif n % 2 = 0 then colrec (n/2) (step + 1)
-    else colrec (3 * n + 1) (step + 1)
-  colrec n 0
+    //printfn "%d" step
+    if n = 1UL then step
+    elif n % 2UL = 0UL then colrec (n/2UL) (step + 1UL)
+    else colrec (3UL * n + 1UL) (step + 1UL)
+  let nUL = uint64 n
+  colrec nUL 0UL
